@@ -28,7 +28,7 @@ $ ./run.sh channel-id
 
 - purchase.list2.txt : [動画ID, 日時, ユーザー名, 金額(円)] がタブ区切りで保存されたリスト
 
-- purchase.summary.video.txt : [動画ID, 日時, 合計金額(円)] がタブ区切りで保存されたリスト
+- purchase.summary.video.txt : [動画ID, 日時, 合計金額(円)] がタブ区切りで保存されたリスト ![](https://user-images.githubusercontent.com/65806595/82765027-44f89180-9e4e-11ea-91ca-8a20424213a9.jpg)
 
 - purchase.summary.name.txt : [ユーザー名, 合計金額(円)] がタブ区切りで保存されたリスト ![](https://user-images.githubusercontent.com/65806595/82764935-9f452280-9e4d-11ea-86f0-10f5c6a41c5b.jpg)
 
