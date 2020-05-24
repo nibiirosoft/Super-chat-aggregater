@@ -30,7 +30,7 @@ $ ./run.sh channel-id
 
 - purchase.summary.video.txt : [動画ID, 日時, 合計金額(円)] がタブ区切りで保存されたリスト
 
-- purchase.summary.name.txt : [ユーザー名, 合計金額(円)] がタブ区切りで保存されたリスト
+- purchase.summary.name.txt : [ユーザー名, 合計金額(円)] がタブ区切りで保存されたリスト ![](https://user-images.githubusercontent.com/65806595/82764935-9f452280-9e4d-11ea-86f0-10f5c6a41c5b.jpg)
 
 - purchase.summary.total.txt : [合計金額(円), 税金(円), Youtube手数料(円), 事務所マージン(円), 収入(円)] がタブ区切りで保存されたリスト ![](https://user-images.githubusercontent.com/65806595/82764794-8a1bc400-9e4c-11ea-9411-0b63a264cb49.jpg)
 
