@@ -1,20 +1,22 @@
+# run.sh
+
 特定のYouTubeチャンネルのすべての動画からスーパーチャット／スーパーステッカーを集計する。
 
+## Usage
 
-Usage: ./run.sh channel-id
+```bash
+$ ./run.sh channel-id
+```
 
-
-Input:
+## Input
 
 ・channel-id : チャンネルID
 
-
-Config:
+## Config
 
 ・config.txt : ダブ区切りの設定ファイル。税率(TAX), Youtube手数料率(FEE), 事務所マージン率(MARGIN), 他各種通貨の円換算のレートが保存されたリスト。
 
-
-Output:
+## Output
 
 ・watch.list.txt : 動画IDのリスト
 
