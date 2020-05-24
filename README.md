@@ -2,6 +2,12 @@
 
 特定のYouTubeチャンネルのすべての動画からスーパーチャット／スーパーステッカーを集計する。
 
+## Installation
+
+```bash
+$ git clone https://github.com/nibiirosoft/super_chat_aggregater
+```
+
 ## Usage
 
 ```bash
