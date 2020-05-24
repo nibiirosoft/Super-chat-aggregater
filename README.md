@@ -5,14 +5,17 @@ Usage: ./run.sh channel-id
 
 
 Input:
+
 ・channel-id : チャンネルID
 
 
 Config:
+
 ・config.txt : ダブ区切りの設定ファイル。税率(TAX), Youtube手数料率(FEE), 事務所マージン率(MARGIN), 他各種通貨の円換算のレートが保存されたリスト。
 
 
 Output:
+
 ・watch.list.txt : 動画IDのリスト
 
 ・purchase.list.txt : [動画ID, 日時, ユーザー名, 通貨, 金額] がタブ区切りで保存されたリスト
