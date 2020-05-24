@@ -33,3 +33,5 @@ $ ./run.sh channel-id
 - purchase.summary.name.txt : [ユーザー名, 合計金額(円)] がタブ区切りで保存されたリスト
 
 - purchase.summary.total.txt : [合計金額(円), 税金(円), Youtube手数料(円), 事務所マージン(円), 収入(円)] がタブ区切りで保存されたリスト
+
+- purchase.summary.other.txt : [通貨, 金額] がタブ区切りで保存されたリスト。config.txtで定義されていない通貨がリストアップされる
