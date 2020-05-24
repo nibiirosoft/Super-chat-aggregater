@@ -1,21 +1,17 @@
-## Super_Chat_Calculator
-  A command line tool that calculates the amount of Super Chat people spent during a live broadcast without using Youtube API
+特定のYouTubeチャンネルのすべての動画からスーパーチャット／スーパーステッカーを集計する。
 
-  YouTube投げ銭(スーパーチャット)金額を計算するPython3 script
+Usage: ./run.sh channel-id
 
-## Requirement:
-  - python3
-  - requests
+Input:
+・channel-id : チャンネルID
 
+Config:
+・config.txt : ダブ区切りの設定ファイル。税率(TAX), Youtube手数料率(FEE), 事務所マージン率(MARGIN), 他各種通貨の円換算のレートが保存されたリスト。
 
-## Usage:   ./super_chat_calculator
-  - Input: a Youtube video link
-  - Output: Super Chat records and the total amount
-
-## To do: 
-  - Documentation
-  - Error Handling
-
-PS:
-言いたいことがあるんだよ😔💭やっぱりみとみと🐰✨かわいいよ☝🏻💗好き💕好き💕大好き💓やっぱ好き🎀💞やっと見つけた😲お姫様👸🌟俺が生まれてきた理由❓👶🏻それはお前🐰✨に出会うため💖👍俺と一緒に人生歩もう💑👫世界🌏でイチバン☝🏻💓愛してる😘❤
-＼ア・イ・シ・テ・ル〜〜❗️💓／
+Output:
+・watch.list.txt : 動画IDのリスト
+・purchase.list.txt : [動画ID, 日時, ユーザー名, 通貨, 金額] がタブ区切りで保存されたリスト
+・purchase.list2.txt : [動画ID, 日時, ユーザー名, 金額(円)] がタブ区切りで保存されたリスト
+・purchase.summary.video.txt : [動画ID, 日時, 合計金額(円)] がタブ区切りで保存されたリスト
+・purchase.summary.name.txt : [ユーザー名, 合計金額(円)] がタブ区切りで保存されたリスト
+・purchase.summary.total.txt : [合計金額(円), 税金(円), Youtube手数料(円), 事務所マージン(円), 収入(円)] がタブ区切りで保存されたリスト
