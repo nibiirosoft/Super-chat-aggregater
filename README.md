@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-$ git clone https://github.com/nibiirosoft/super_chat_aggregater
+$ git clone https://github.com/nibiirosoft/Super-chat-aggregater
 ```
 
 ## Usage
