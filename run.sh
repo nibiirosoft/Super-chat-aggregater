@@ -9,15 +9,12 @@ if [ "$1" != "" ]; then
 fi
 
 SCRIPT_DIR=$(cd $(dirname $(readlink -f $0 || echo $0));pwd -P)
-RESULT_DIR=$CHANNELID
 
 TAX=$(cat $SCRIPT_DIR/config.txt | grep TAX | cut -f 2)
 FEE=$(cat $SCRIPT_DIR/config.txt | grep FEE | cut -f 2)
 MARGIN=$(cat $SCRIPT_DIR/config.txt | grep MARGIN | cut -f 2)
 
 echo "ChannelId=$CHANNELID, Tax=$TAX, Fee=$FEE, Margin=$MARGIN"
-
-rm -rf $RESULT_DIR
 
 i=0
 while true; do
@@ -30,7 +27,12 @@ while true; do
   fi
 
   if echo -e "$data" | grep 'watch?v=' >/dev/null; then
-    mkdir $RESULT_DIR
+    TITLE=$(echo -e "$data" | grep 'g:title" content="' | sed 's/^.*content="\([^"]*\)">$/\1/' | sed 's/[ \&]/_/g')
+    echo "Title=$TITLE"
+
+    RESULT_DIR="${CHANNELID}_${TITLE}"
+    #rm -rf $RESULT_DIR
+    mkdir -p $RESULT_DIR
     break
   fi
 
@@ -105,6 +107,16 @@ done
 
 echo '----'
 cat $RESULT_DIR/purchase.summary.video.txt | sort -t $'\t' -k 3rn | head -n 5
+
+echo '----'
+cat $RESULT_DIR/purchase.list2.txt | awk -F '\t' 'BEGIN{OFS="\t";OFMT="%.0f"}{
+  split($2, array, "-");
+  total[array[1]] += $4;
+}END{
+  for(year in total){
+    print year, total[year], int(total[year]/1000)/10"万";
+  }
+}' | tee $RESULT_DIR/purchase.summary.year.txt
 
 echo -e "Total	Tax($(echo "$TAX*100/1" | bc)%)	Fee($(echo "$FEE*100/1" | bc)%)	Margin($(echo "$MARGIN*100/1" | bc)%)	Profit" > $RESULT_DIR/purchase.summary.total.txt
 cat $RESULT_DIR/purchase.list2.txt | awk -F '\t' 'BEGIN{OFS="\t";}{
