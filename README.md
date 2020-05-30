@@ -34,7 +34,7 @@ $ ./run.sh channel-id
 
 - purchase.list.txt : [動画ID, 日時, ユーザー名, 通貨, 金額, コメント] がタブ区切りで保存されたリスト
 
-- purchase.list2.txt : [動画ID, 日時, ユーザー名, 金額(円), コメント] がタブ区切りで保存されたリスト ![](https://user-images.githubusercontent.com/65806595/82765164-41193f00-9e4f-11ea-9d1e-a2a8c5df6106.jpg)
+- purchase.list2.txt : [動画ID, 日時, ユーザー名, 金額(円), コメント] がタブ区切りで保存されたリスト ![](https://user-images.githubusercontent.com/65806595/83334234-0ea09380-a2e0-11ea-9311-cc0b3f987226.jpg)
 
 - purchase.summary.video.txt : [動画ID, 日時, 合計金額(円)] がタブ区切りで保存されたリスト ![](https://user-images.githubusercontent.com/65806595/82765027-44f89180-9e4e-11ea-91ca-8a20424213a9.jpg)
 
