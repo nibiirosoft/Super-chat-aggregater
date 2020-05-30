@@ -28,6 +28,8 @@ $ ./run.sh channel-id
 
 ## Output
 
+[channel-id]_[チャンネル名]のフォルダを作成し、その下に次のファイルを生成する。
+
 - watch.list.txt : 動画IDのリスト
 
 - purchase.list.txt : [動画ID, 日時, ユーザー名, 通貨, 金額, コメント] がタブ区切りで保存されたリスト
