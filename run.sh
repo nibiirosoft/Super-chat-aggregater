@@ -69,7 +69,7 @@ done
 
 i=0
 n=$(cat $RESULT_DIR/watch.list.txt | wc -l)
-rm -f $RESULT_DIR/purchase.list.txt $RESULT_DIR/purchase.list2.txt purchase.summary.video.txt
+rm -f $RESULT_DIR/purchase.list.txt $RESULT_DIR/purchase.list2.txt $RESULT_DIR/purchase.summary.video.txt
 cat $RESULT_DIR/watch.list.txt | while read id; do
   i=$((i+1))
   url="https://www.youtube.com/watch?v=$id"
