@@ -117,7 +117,7 @@ cat $RESULT_DIR/purchase.list2.txt | awk -F '\t' 'BEGIN{OFS="\t";OFMT="%.0f"}{
   for(month in total){
     print month, total[month], int(total[month]/1000)/10"万";
   }
-}' | tee $RESULT_DIR/purchase.summary.month.txt | sort -t $'\t' -k 3rn | head -n 5
+}' | sort | tee $RESULT_DIR/purchase.summary.month.txt | sort -t $'\t' -k 3rn | head -n 5
 
 echo '----'
 cat $RESULT_DIR/purchase.list2.txt | awk -F '\t' 'BEGIN{OFS="\t";OFMT="%.0f"}{
